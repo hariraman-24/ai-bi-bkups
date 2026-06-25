@@ -1,0 +1,14 @@
+List of API Endpoints in AI_BI System:
+
+1. POST /query
+   Description: Main endpoint for processing natural language questions.
+   Handles:
+     - SQL generation and execution for MySQL and PostgreSQL.
+     - File processing (CSV, Excel, PDF) if a file is uploaded.
+     - Sales forecasting if "forecast" is in the question.
+     - Chart generation for relevant queries.
+   Parameters (form-data or JSON):
+     - question (string): The user's NLP question.
+     - database (string): Choice of database (mysql or postgresql).
+     - file (file): Optional file upload for data processing.
+   Location: backend/mcp_server.py
